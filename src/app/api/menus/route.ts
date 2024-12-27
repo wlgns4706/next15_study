@@ -1,7 +1,7 @@
 import { MenuProps } from 'antd';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
-export function GET(request: NextRequest) {
+export function GET() {
   type MenuItem = Required<MenuProps>['items'][number];
 
   const items: MenuItem[] = [

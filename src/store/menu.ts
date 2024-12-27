@@ -1,4 +1,3 @@
-import { init } from 'next/dist/compiled/webpack/webpack';
 import { create } from 'zustand';
 type TMenuState = {
   isShowMenubar: boolean;
@@ -15,7 +14,7 @@ const initialState: TMenuState = {
   isShowMenubar: true,
 };
 
-export const useMenuStore = create<TMenuState & TMenuAction>((set, get) => ({
+export const useMenuStore = create<TMenuState & TMenuAction>((set) => ({
   ...initialState,
   actions: {
     handleShowMenubar: () => set((state) => ({ ...state, isShowMenubar: !state.isShowMenubar })),

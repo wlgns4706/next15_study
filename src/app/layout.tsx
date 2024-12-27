@@ -1,4 +1,3 @@
-import { MenuProps } from 'antd';
 import './globals.css';
 import SubMenu from '@/components/main/SubMenu';
 import TopNavi from '@/components/main/TopNavi';
@@ -10,8 +9,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  type MenuItem = Required<MenuProps>['items'][number];
-
   const fetchPosts = async () => {
     const response = await fetch('http://localhost:3000/api/menus', {
       method: 'get',
